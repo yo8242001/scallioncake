@@ -1,0 +1,184 @@
+*{
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    border: 0.5px solid rgba(0,0,0,0.2);
+}
+/* 整體頁面 */
+#about{
+    width: 100%;
+    height: auto;
+}
+.about_main{
+    width: 80%;
+    margin: 0 auto;
+}
+/* 標題 */
+.about_title{
+    font-size: 2.5em;
+    text-align: center;
+    padding-top: 60px;
+    /* background-color: rgba(0,0,0,0.1); */
+}
+.about_title h3{
+    padding-top: 10px;
+    padding-bottom: 30px;
+    font-size: 0.5em;
+    color: rgba(0,0,0,0.3);
+}
+/* 01:圖文 */
+
+
+.about_container1{
+    /* 格線設定:兩欄 */
+    display: grid;
+    grid-template-columns: 600px auto;
+    grid-gap: 10px 10px;
+}
+.about_contect1{
+    /* height: 200px; */
+    /* line-height: 200px; */
+    padding-top: 180px;
+    padding-left: 100px;
+    text-align: center;
+}
+.about_contect1 img{
+    display: block;
+    width: 20%;
+    float: right;
+    
+}
+/* 按鈕 */
+.about_button{
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 1.5em;
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid rgba(30, 30, 30, 0.6);
+    color: rgba(30, 30, 30, 0.8);
+}
+.about_button:hover{
+    /* background-color: #1b1b1be3; */
+    border: 1px solid #b99902;
+    color: #b99902;
+}
+/* 多行看成一行 */
+.about_contect1 span{
+    display: inline-block;
+    font-size: 1.5em;
+    height: auto;
+    line-height: 1.5;
+    padding-bottom: 80px;
+}
+.about_pic1{
+    margin: 0 auto;
+}
+.about_pic1 img{
+    width: 400px;
+    /* padding: 30px; */
+}
+
+/* 02:影片 */
+.about_container2{
+    /* 格線設定:兩欄 */
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    padding-bottom: 100px;
+}
+
+.about_video {
+    text-align: center;
+}
+.about_contect2{
+    padding-top: 50px;
+    padding-right: 80px;
+    text-align: center;
+}
+.about_contect2 span{
+    display: inline-block;
+    font-size: 1.5em;
+    height: auto;
+    line-height: 1.5;
+    padding-bottom: 10px;
+}
+.about_c2_text{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+/* 手機 */
+@media screen and (max-width:767px){
+    #about{
+        padding-top: 70px;
+    }
+    .about_title{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    .about_container1{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    .about_contect1{
+        width: 90%;
+        padding-left: 0;
+    }
+    .about_container2{
+        display: grid;
+        grid-template-columns: 100%;
+        margin-top: 50px;
+    }
+    .about_pic1{
+        width: 100%;
+        padding-top:50px; 
+        left: 0;
+    }
+    .about_pic1 img{
+        float: left;
+        width: 300px;
+    }
+    .about_video{
+        padding-top: 50px;
+        width: auto;
+        height: auto;
+    }
+    iframe{
+        width: 80%;
+    }
+    .about_contect2{
+        padding-right: 0;
+    }
+}
+
+/* 平板 */
+@media screen and (min-width:768px) and (max-width:1024px){
+    .about_container1{
+        grid-template-columns: 100%;
+    }
+    .about_contect1{
+        padding-left: 0;
+    }
+    .about_container2{
+        grid-template-columns: 100%;
+    }
+    .about_pic1{
+        padding-top: 100px;
+    }
+    .about_video{
+        padding-top: 150px;
+    }
+    iframe{
+        width: 80%;
+    }
+    .about_c2_text{
+        padding-top: 50px;
+    }
+    .about_contect2{
+        padding-right: 0;
+        padding-bottom: 50px;
+    }
+}

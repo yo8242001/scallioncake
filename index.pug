@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+html(lang="zh")
+    head
+        meta(charset="UTF-8")
+        title 傳統蔥油餅
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+        link(href="https://fonts.googleapis.com/css?family=Noto+Serif+TC&display=swap" rel="stylesheet")
+        link(rel="stylesheet", href="index.css")
+        link(rel="stylesheet" href="nav.css")
+        link(rel="stylesheet", href="about.css")
+        link(rel="stylesheet", href="menu.css")
+        link(rel="stylesheet" href="event.css")
+        link(rel="stylesheet", href="location.css")
+        link(rel="stylesheet" href="contact.css")
+        link(rel="stylesheet" href="footer.css")
+        link(href="https://fonts.googleapis.com/css?family=Noto+Serif+TC&display=swap" rel="stylesheet")
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        
+    body
+        img( id="backtotop" src="backtotop.png", alt="Bakc to Top")
+        include nav.pug
+        include about.pug
+        <div class="passImg"></div>
+        include menu.pug
+        include event.pug
+        //- <div class="passImg"><img src="bg.jpg" alt=""></div>
+        include location.pug
+        include contact.pug
+        include footer.pug
+    |<script>
+    |window.onscroll = function() {myFunction()};
+
+    |var header = document.getElementById("nav");
+    |var sticky = header.offsetTop ;
+
+    |function myFunction() {
+    |if (window.pageYOffset > sticky) {
+    |    header.classList.add("sticky");
+    |} else {
+    |    header.classList.remove("sticky");
+    |}
+    |}
+    |</script>
+    
+    script(src="backtotop.js")
+    //-aos動畫    
+    | <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    | <script>
+    |    AOS.init({
+    |       duraction: 3000,
+    |       offset: 600
+    |    });
+    | </script>

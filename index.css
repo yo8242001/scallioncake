@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+}
+
+body{
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    background: white;
+
+}
+
+
+/* 清除網頁浮水印 */
+img[alt="www.000webhost.com"]{
+    display: none;
+}
+
+.passImg{
+    width: 100%;
+    height: 350px;
+    display: block;
+    background-image: url(./passing2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* Bakc to Top */
+#backtotop{
+    width: 25px;
+    height: 25px;
+    position: fixed;
+    right: 20px;  
+    bottom: 20px;
+    padding: 5px;
+    cursor: pointer;
+}
+.opa-animate{
+    animation: 3.5s 1 opacity;
+    animation-fill-mode:both;
+}
+@keyframes opacity{
+    0%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 1;
+    }
+    50%{
+        z-index: 0;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+/* RWD */
+@media screen and (max-width: 1024px){
+    .passImg{
+        width: 100%;
+        height: 200px;
+        display: block;
+        background-image: url(./passing2.jpg);
+        background-attachment: inherit;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100%;
+    }
+}

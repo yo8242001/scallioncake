@@ -1,0 +1,241 @@
+/* div hr{
+    margin-top: 50px;
+    height:0.75px;
+    background-color: #333;
+} */
+
+/* Background */
+#background{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 99999;
+}
+
+#logo{
+    vertical-align: center;
+    width: 15%;
+    height: auto;
+    margin: -20px auto;
+    /* z-index: 1; */
+    /* box-shadow: 9px 9px black; */
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* 之後做動態淡出 */
+    /* box-shadow: -3px -3px rgba(0,0,0,0.8); */
+}
+.hamburger a img{
+    display: none;
+}
+
+#lowlogo{
+    width: 1.2em;
+    margin: 0px auto;
+    padding-left: 20px;
+    float: left;
+    border: 0px;
+}
+
+.linklist{
+    display: inline-block;
+    text-decoration: none;
+    border: 0px solid white;
+}
+
+.linklist li{
+    margin: 5px;
+    border: 0px solid white;
+}
+
+
+
+.linklist{
+    padding: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+
+
+ul li{
+    display: inline-block;
+    float: left;
+}
+
+ul li a{
+    text-decoration: none;
+    display: inline-block;
+    border: 0px;
+    width: 110px;
+    height: 40px;
+    line-height: 35px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.linklist li a:hover{
+    color: rgba(194, 43, 43, 0.5);
+}
+
+.indexpage{
+    width: 100%;
+    height: 100vh;
+    /* background-color: rgb(132, 123, 185); */
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+#nav{
+    width: 100%;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.699);
+    margin-left: 0;
+    margin-right: 0;
+    z-index: 5;
+} 
+
+/* Mobile Hamburger */
+@media only screen and (max-width: 1023px) {
+    #logo{
+        vertical-align: center;
+        width: 30%;
+        height: auto;
+        margin: -20px auto;
+        transform: translate(-50%,-50%);
+        position: absolute;
+        top: 50%;
+        left: 50%; 
+    }
+    
+    .mobilenav{
+        height: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        z-index: 99;
+        background: rgba(250, 250, 250, 0.959);
+        box-shadow: 6px 6px 30px rgba(230, 224, 224, 0.5);
+    }
+    #nav{
+        width: 100%;
+        bottom: inherit;
+        top: 0;
+        left: 0;
+        height: auto;
+        background-color: rgba(250, 250, 250,0.9);
+        margin: 0;
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 55px 0 30px;
+        transform: translateY(-100vh);
+        transition: all 0.3s ease;
+        z-index: 9;
+
+    } 
+    #nav.active{
+        transform: translateY(0vh);
+        transition: all 0.3s ease;
+        box-shadow: 6px 6px 20px rgba(175, 156, 156, 0.5),3px 3px 10px rgba(175, 173, 45, 0.781),9px 9px 30px rgb(182, 183, 184);
+
+    } 
+    #lowlogo{
+        display: none;
+    }
+    .linklist li{
+        width: 100%;
+
+    }
+    .linklist li>a{
+        float: left;
+        width: 100%;
+        text-align: center;
+        
+    }
+    .hamburger,.hamburger-menu{
+        display: block;
+        z-index: 10;
+    }
+    .hamburger a img{
+        width: 15%;
+        margin-left: 30px;
+        display: block;
+    }
+    .hamburger>a{
+        text-decoration: none;
+        font-size: 28px;
+        z-index: 9;
+    }
+    
+    .hamburger-menu {
+        width: 32px;
+        cursor: pointer;
+        line-height: 12px;
+        z-index: 9;
+        height: 36px;
+        position: relative;
+    }
+    
+    .hamburger-menu span {
+        display: inline-block;
+        width: 32px;
+        height: 4px;
+        background: #37454e;
+        transition: all .5s;
+        position: absolute;
+        top: 0;
+    }
+    
+    .hamburger-menu span:nth-child(2) {
+        width: 32px;
+        top: 13px;
+    }
+    
+    .hamburger-menu span:last-child {
+        width: 32px;
+        top: 25px;
+    }
+
+
+    .hamburger-menu.active span {
+        /* margin-top: 15px; */
+        position: absolute;
+        width: 32px;
+    }
+    
+    /* .hamburger-menu.active span:first-child {
+        transform: rotate(-135deg);
+    }
+    
+    .hamburger-menu.active span:nth-child(2) {
+        transform: rotate(135deg);
+        top: 0;
+    }
+    
+    .hamburger-menu.active span:last-child {
+        margin-top: 30px;
+        width: 0px;
+      display: none;
+    } */
+    body{
+        width: 100%;
+    }
+}
